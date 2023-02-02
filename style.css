@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* This body is dropping everything in the middle basically */
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh; /* vh means viewport height, takes up the whole page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+.container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+.card {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 2rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2); /* x y blur color then the color of black and the intensity */
+}
+
+.coffee {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coffee img {
+    width: 15rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+.circle {
+    width: 10rem;
+    height: 10rem;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75),
+        rgba(255, 255, 255, 0.75)
+    );
+    position: absolute; /* centers the circle */
+    border-radius: 50%;
+    z-index: 1; /* first layer */
+}
+.info h1 {
+    font-size: 2rem;
+    transition: all 0.75s ease-out;
+}
+.info h3 {
+    font-size: .9rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+.sizes button{
+    padding: 0.5rem 2rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+}
+button.active {
+    background: #585858;
+    color: white;
+}
+.order {
+    margin-top: 5rem;
+    transition: all 0.75s ease out;
+}
+.order button {
+    width: 100%;
+    padding: 1rem 0rem;
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    position: relative;
+    top: -27px;
+}
